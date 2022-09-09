@@ -14,7 +14,7 @@
         nav2.set(menu?30:0);};
 
   </script>
-<main class='bg-stone-100 pt-[4.75rem]' >
+<main class='bg-stone-100 pt-[4.75rem] ' >
         <div class='bg-white shadow-xl fixed h-screen w-[180px] top-0' style='left: {$nav1-110}px'>
         <div class='max-w-full h-16 bg-stone-400 rounded-r-full left-0 ' style='width: {90 + $nav2}px'></div>
         <div class =' py-6  h-full w-[180px] flex flex-col '>
@@ -26,7 +26,7 @@
         </div>
     </div>
 
-<header class='h-min w-screen flex fixed top-0 '>
+<header class='h-min w-full flex fixed top-0 '>
 
     <button class=' px-3 text-lg font-bold mr-3 rounded-r-full ' on:click={nav} > <p style='margin-left: {$nav2}px ;margin-right: {$nav2}px' > Menu</p>  </button>
     <div class='bg-stone-900 flex p-3 justify-between w-full rounded-l-full'>
@@ -41,12 +41,12 @@
 </header>
 
 
-<div class='max-w-screen grid grid-cols-1 place-content-center justify-center' style='margin-left: {$nav1+70}px'>
+<div class=' grid grid-cols-1 place-content-center justify-center' style='margin-left: {$nav1+70}px'>
 <slot>
 
 </slot>
 </div>
-<footer class='flex bg-stone-900 pt-20 b-p[50px] pl-[100px] justify-center w-screen focus:bg-red-400 '>
+<footer class='flex bg-stone-900 pt-20 b-p[50px] pl-[100px] justify-center w-full focus:bg-red-400 '>
     <div class='px-4 justify-center flex' >
         <nav class='h-[560px] w-[490px] grid grid-cols-2 gap-0'>
             <div class='block'>
