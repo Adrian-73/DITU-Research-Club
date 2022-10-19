@@ -29,7 +29,7 @@
 
 </script>
 
-<div  class="place-self-center  w-[80vw] grid grid-cols-6 p-10 h-[32rem] bg-[url(https://www.dituniversity.edu.in/Uploads/image/1005imguf_research-22.jpg)]" > 
+<div  class="place-self-center w-full md:w-[80vw] grid grid-cols-6 p-10 h-[32rem] bg-[url(https://www.dituniversity.edu.in/Uploads/image/1005imguf_research-22.jpg)]" > 
     <div class='col-end-2 col-span-2 w-[26rem] bg-teal-600 rounded-3xl p-4'>
         <h1 class="text-5xl text-slate-100 shadow-2">Apply for research</h1>
         <h3 class="text-2xl text-slate-100 shadow-2 mt-4">We will be helping, guiding and assisting you to bring forth your discoveries to the world from equripment handeling to publishing and proof reading we are on every step with you </h3>
@@ -40,7 +40,7 @@
 </div>
 
 
-<div class="w-[80vw] place-self-center my-10 p-[4rem]">
+<div class="w-[100vw] md:w-[80vw] place-self-center my-10 p-[4rem]">
 <p class=' text-4xl  p-4 bg-white'>Latest Research Articals</p>
 <div class=' h-max bg-white justify-center flex p-6'>
     
@@ -51,14 +51,14 @@
 {/if}
 </div></div>
 
-<div class='max-w-[80rem] h-max bg-white place-self-end grid grid-cols-7 m-4 mx-8'>
+<div class='md:max-w-[80rem] h-max bg-white place-self-end grid grid-cols-7 m-4 mx-8'>
     <div class="col-span-4 p-4 ">
         <h3 class="text-3xl shadow-2 mt-4">Research Fecility </h3>
     </div>
     <img src="https://www.dituniversity.edu.in/Uploads/image/2678imguf_1.Pluto.jpeg"  class="w-auto h-[30rem] col-span-3 col-end-0" alt='Img1'>
 </div>
 
-<div class='max-w-[80rem] h-max bg-white place-self-start grid grid-cols-7 m-4 mx-8'>
+<div class='md:max-w-[80rem] h-max bg-white place-self-start grid grid-cols-7 m-4 mx-8'>
     <div class="col-span-4 p-4 ">
         <h3 class="text-3xl shadow-2 mt-4">Finatial support policy </h3>
     </div>

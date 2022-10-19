@@ -14,8 +14,7 @@
         nav2.set(menu?30:0);};
 
   </script>
-<main class='bg-stone-100 pt-[4.75rem] ' >
-        <div class='bg-white shadow-xl fixed h-screen w-[180px] top-0' style='left: {$nav1-110}px'>
+<div class='bg-white shadow-xl fixed h-full w-[180px] top-0' style='left: {$nav1-110}px'>
         <div class='max-w-full h-16 bg-stone-400 rounded-r-full left-0 ' style='width: {90 + $nav2}px'></div>
         <div class =' py-6  h-full w-[180px] flex flex-col '>
             <a href="/" class='px-6 py-1  text-xl bg-white hover:bg-stone-200 w-full h-max'>Home </a>
@@ -24,31 +23,29 @@
             <a href="/Research" class='px-6 py-1 text-xl bg-white hover:bg-stone-200 w-full'>Research </a>
             <a href="/Form" class='px-6 py-1 text-xl bg-white hover:bg-stone-200 w-full'>Form </a>
         </div>
-    </div>
+</div>
 
-<header class='h-min w-full flex fixed top-0 '>
+<header class='h-min w-full flex fixed top-0 left-0 place-self-center'>
 
     <button class=' px-3 text-lg font-bold mr-3 rounded-r-full ' on:click={nav} > <p style='margin-left: {$nav2}px ;margin-right: {$nav2}px' > Menu</p>  </button>
     <div class='bg-stone-900 flex p-3 justify-between w-full rounded-l-full'>
-        <p class='text-4xl text-white pl-4'>DIT Research</p>
-        <div class='h-max'>
-            <div class="px-4 bg-white rounded-full">
-                <input class = 'p-1' type="text" placeholder="Search..">
-                <button class='bg-white p-1'>Search</button>
-            </div>
+        <p class='text-4xl  text-white pl-4'>DIT Research</p>
+    
+        <div class="px-4 h-min bg-white rounded-full">
+            <input class = 'p-1 max-w-[90px] lg:w-min' type="text" placeholder="Search..">
+            <button class='bg-white p-1'>Search</button>
         </div>
+        
     </div>
 </header>
-
-
-<div class=' grid grid-cols-1 place-content-center justify-center' style='margin-left: {$nav1+70}px'>
-<slot>
-
-</slot>
+<div class="w-full grid grid-cols-1">
+    <slot>
+    </slot>
 </div>
-<footer class='flex bg-stone-900 pt-20 b-p[50px] pl-[100px] justify-center w-full focus:bg-red-400 '>
-    <div class='px-4 justify-center flex' >
-        <nav class='h-[560px] w-[490px] grid grid-cols-2 gap-0'>
+
+<footer class=' bg-stone-900 pt-20 p-[50px] pl-[100px] justify-center w-max md:w-full'>
+    <div class='px-4 justify-center w-full md:flex' >
+        <nav class='h-[560px] max-w-[490px] grid grid-cols-2 gap-0'>
             <div class='block'>
                 <h3 class='text-white text-3xl '>Page</h3>
                 <p class='text-white text-xl '>Link1</p>
@@ -86,9 +83,9 @@
                 <p class='text-white text-xl '>Link3</p>
             </div>
         </nav>
-        <div class='h-[560px] w-[490px] justify-center'>
+        <div class='h-[560px] max-w-[490px] justify-center'>
             <img src="./LOGO.png" class="my-8 h-20"/>
-            <div class="flex justify-between pb-4">
+            <div class="md:flex justify-between pb-4">
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="fill-white hover:fill-teal-400">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24ZM26.5016 38.1115V25.0542H30.1059L30.5836 20.5546H26.5016L26.5077 18.3025C26.5077 17.1289 26.6192 16.5001 28.3048 16.5001H30.5581V12H26.9532C22.6231 12 21.0991 14.1828 21.0991 17.8536V20.5551H18.4V25.0547H21.0991V38.1115H26.5016Z" />
                 </svg>
@@ -118,7 +115,6 @@
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M18.3159 33.0319L13.8265 34.2096L15.0248 29.8324L14.7428 29.3836C13.5554 27.4951 12.9283 25.3124 12.9292 23.0711C12.9318 16.5311 18.2529 11.2104 24.7958 11.2104C27.964 11.2115 30.9422 12.4469 33.1817 14.689C35.4212 16.9311 36.6538 19.9112 36.6526 23.0807C36.6499 29.6212 31.3289 34.9424 24.7911 34.9424H24.7863C22.6578 34.9415 20.5702 34.3697 18.749 33.289L18.3159 33.0319ZM31.9808 26.4751C31.8917 26.3264 31.654 26.2372 31.2974 26.0586C30.9408 25.8801 29.1877 25.0176 28.8608 24.8985C28.534 24.7795 28.2961 24.7201 28.0585 25.0769C27.8208 25.4339 27.1374 26.2372 26.9294 26.4751C26.7214 26.7131 26.5133 26.7429 26.1569 26.5644C25.8003 26.3859 24.6513 26.0094 23.2893 24.7945C22.2292 23.8489 21.5135 22.6813 21.3055 22.3243C21.0975 21.9673 21.2834 21.7743 21.4619 21.5965C21.6223 21.4367 21.8185 21.1799 21.9968 20.9718C22.1751 20.7636 22.2345 20.6148 22.3533 20.377C22.4722 20.1389 22.4128 19.9307 22.3236 19.7522C22.2345 19.5737 21.5213 17.8185 21.2242 17.1045C20.9347 16.4092 20.6408 16.5034 20.4219 16.4924C20.2141 16.482 19.9762 16.4798 19.7385 16.4798C19.5008 16.4798 19.1144 16.569 18.7876 16.926C18.4607 17.283 17.5395 18.1457 17.5395 19.9008C17.5395 21.656 18.8173 23.3516 18.9956 23.5896C19.1739 23.8276 21.51 27.4293 25.0871 28.9739C25.9379 29.3413 26.602 29.5607 27.12 29.725C27.9742 29.9965 28.7516 29.9582 29.3659 29.8663C30.0511 29.764 31.4756 29.0038 31.7729 28.1709C32.0699 27.3378 32.0699 26.6238 31.9808 26.4751Z" />
                 </svg>
             </div>
-            <hr>
+            
         </div>
 </footer>
-</main>
