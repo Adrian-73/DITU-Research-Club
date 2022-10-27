@@ -1,8 +1,9 @@
 <script>
-    import "../app.css";
-    import logo from "$lib/LOGO.png";
-    import {cubicOut} from 'svelte/easing';
-    import {tweened} from 'svelte/motion';
+    import "../app.css" ;
+    import logo from "$lib/LOGO.png" ;
+    import {cubicOut} from 'svelte/easing' ;
+    import {tweened} from 'svelte/motion' ;
+
     let menu= false ;
     export const nav1 = tweened(0,{
         easing: cubicOut
@@ -12,10 +13,14 @@
     });
     function nav(){menu = !menu;
         nav1.set(menu?110:0);
-        nav2.set(menu?30:0);};
+        nav2.set(menu?30:0);}
 
   </script>
-<div class='bg-white shadow-xl fixed h-full w-[180px] top-0' style='left: {$nav1-110}px'>
+
+<svelte:window on:resize={nav}/>
+
+{#if false}{:else}
+<div class='bg-white shadow-xl fixed h-full w-[180px] top-0' style='left: {$nav1-110}px;'>
         <div class='max-w-full h-16 bg-stone-400 rounded-r-full left-0 ' style='width: {90 + $nav2}px'></div>
         <div class =' py-6  h-full w-[180px] flex flex-col '>
             <a href="/" class='px-6 py-1  text-xl bg-white hover:bg-stone-200 w-full h-max'>Home </a>
@@ -24,13 +29,13 @@
             <a href="/Research" class='px-6 py-1 text-xl bg-white hover:bg-stone-200 w-full'>Research </a>
             <a href="/Form" class='px-6 py-1 text-xl bg-white hover:bg-stone-200 w-full'>Form </a>
         </div>
-</div>
+</div>{/if}
 
 <header class='h-min w-full flex fixed top-0 left-0 place-self-center'>
 
-    <button class=' px-3 text-lg font-bold mr-3 rounded-r-full ' on:click={nav} > <p style='margin-left: {$nav2}px ;margin-right: {$nav2}px' > Menu</p>  </button>
-    <div class='bg-stone-900 flex p-3 justify-between w-full rounded-l-full'>
-        <p class='text-4xl  text-white pl-4'>DIT Research</p>
+    <button class=' px-3 md:text-lg text-2xl font-bold mr-3 rounded-r-full ' on:click={nav} > <p style='margin-left: {$nav2}px ;margin-right: {$nav2}px' > Menu</p>  </button>
+    <div class='bg-stone-900 flex p-3 justify-between items-center w-full rounded-l-full'>
+        <p class='sm:text-4xl text-5xl sm:my-0 my-2 text-white pl-4'>DIT Research</p>
     
         <div class="px-4 h-min bg-white rounded-full">
             <input class = 'p-1 max-w-[90px] lg:w-min' type="text" placeholder="Search..">
@@ -39,12 +44,13 @@
         
     </div>
 </header>
-<div class="w-full grid grid-cols-1 px-20">
+<div class="w-full grid grid-cols-1 main place-items-center" style="--size : {$nav1}px">
+    
     <slot>
     </slot>
 </div>
 
-<footer class=' bg-stone-900 pt-20 p-[50px] pl-[100px] justify-center w-max md:w-full'>
+<footer class=' bg-stone-900 pt-20 p-[50px] pl-[100px] justify-center w-max sm:w-full'>
     <div class='px-4 justify-center w-full md:flex' >
         <nav class='h-[560px] max-w-[490px] grid grid-cols-2 gap-0'>
             <div class='block'>
@@ -120,3 +126,13 @@
             
         </div>
 </footer>
+
+<style>
+    @media(
+        min-width: 640px
+    ) {
+        .main {
+            padding-left: var(--size);
+        }
+    }
+</style>
