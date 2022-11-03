@@ -31,7 +31,7 @@
     </div>
     <img src="https://www.dituniversity.edu.in/Uploads/image/2678imguf_1.Pluto.jpeg"  class="w-auto h-[30rem] col-span-3 col-end-0" alt='Img1'>
 </div>
-<div class='max-w-[87rem] h-max lg:flex place-self-center my-8'>
+<div class='max-w-[87rem] h-max xl:flex place-self-center my-8'>
     <div class='w-[37rem] h-max mx-4 bg-white p-6'>
     <img src="https://www.dituniversity.edu.in/images/honor-code-img.jpg"  class="w-[35rem] h-auto" alt='Img1'>
     <h3 class='text-3xl p-4'>Join Research Club</h3>

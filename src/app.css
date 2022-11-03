@@ -1,7 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components {
 .block{
     @apply h-[100px] w-[220px] mb-10 mr-5;
 
 }
+.social{
+    @apply fill-white transition duration-[400ms] hover:fill-teal-400 ;
+}
+
+}
+

@@ -1,8 +1,8 @@
 <script>
     let IsStudent = false;
 </script>
-<main>
-    <form method="POST" class="grid-cols-2 grid text-2xl">
+
+    <form method="POST" class="md:grid-cols-2 place-items-center w-full grid text-2xl">
        <div class="form-entry"> <label for="name">Name</label>
         <input class="form-input" type="text" name="name" id="name" /></div>
         <div class="form-entry"><label for="email">Email</label>
@@ -12,7 +12,7 @@
         <div class="form-entry "><label for="IsStudent">Are you registered in DIT university?</label>
             <input class="scale-[200%] m-2" type="checkbox" name="IsStudent" id="IsStudent" bind:checked={IsStudent} />
         </div>
-        {#if IsStudent}
+        {#if IsStudent }
         <div class="form-entry "> 
             <label for="Year">Year</label>
             <input class="form-input" type="number" name="Year" id="Year" />
@@ -38,13 +38,13 @@
         <div class="form-entry"></div>
         <button  type="submit">Send</button>
     </form>
-</main>
+
 <style>
     .form-entry{
-        @apply m-2 grid grid-cols-1 place-items-start;
+        @apply  m-2 w-[90%] grid grid-cols-1 place-items-start;
     }
     .form-input{
-        @apply w-3/4 rounded-full mt-2 focus:outline-blue-400 shadow-blue-400 focus:shadow-lg border-2 px-6 py-1 border-gray-300;
+        @apply w-full rounded-xl mt-2 focus:outline-blue-400 shadow-blue-400 focus:shadow-lg border-2 px-6 py-1 border-gray-300;
     }
     .form-textarea{
         @apply w-full rounded-xl border-2 px-6 py-2  focus:outline-blue-400 shadow-blue-400 focus:shadow-lg border-gray-300;
