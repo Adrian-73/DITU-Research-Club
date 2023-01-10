@@ -1,5 +1,6 @@
 <script>
 	import { fade } from 'svelte/transition'
+	import Paper from '../../lib/Papers.json';
 	import View from '../../lib/paper.svelte'
 	import View1 from '../../lib/paper1.svelte'
 	import View2 from '../../lib/paper2.svelte'
@@ -57,7 +58,22 @@
     </div>
     <img src="https://www.dituniversity.edu.in/Uploads/image/2678imguf_1.Pluto.jpeg"  class="w-auto h-[30rem] col-span-3 col-end-0" alt='Img1'>
 </div>
-
+<div class="bg-white w-full max-w-[90rem] grid grid-cols-1 place-items-center pt-16">
+	{#each Paper as page}
+		<div class="p-4 w-full max-w-[80rem] bg-stone-200 m-4 grid grid-cols-1 h-[15rem] ">
+			<div>
+				<p class= "text-2xl w-2/3">{page['Title of paper']}</p>
+				<a target="_blank" href="{page['Journal Link']}"class= "place-self-end mt-4 hover:text-blue-800 py-1  w-max">{page['Name of journal']}</a>
+			</div>
+			<div class="flex w-full justify-between">
+				<p class= "text-xl w-max">Author's : {page['Name of the author\/s']}</p>
+				<div class="flex">
+					<a target="_blank" href="{page['Publication Link']}"class= "place-self-end mt-4 px-2 py-1 bg-teal-400 rounded-full w-max">read more</a>
+				</div>
+			</div>
+		</div>
+	{/each}
+</div>
 <div class='md:max-w-[80rem] h-max bg-white place-self-start grid grid-cols-7 m-4 mx-8'>
     <div class="col-span-4 p-4 ">
         <h3 class="text-3xl shadow-2 mt-4">Finatial support policy </h3>

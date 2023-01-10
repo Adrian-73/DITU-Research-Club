@@ -3,7 +3,7 @@
 @tailwind utilities;
 @layer components {
 .block{
-    @apply h-[100px] w-[220px] mb-10 mr-5;
+    @apply h-min w-[220px] pb-10 pt-5 pl-5;
 
 }
 .social{
