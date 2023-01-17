@@ -1,117 +1,29 @@
-    <script >
-            </script>
-    <section class="Event place-self-center ">
-        <div class="container ">
-            <h1 class="section-heading mt-[4.75rem]"><span>Event </span> Page</h1>
-            <p>We do various events in a year and several about them are very Entertaining</p>
-            <div class="slider">
-                <div class="slide">
-                    <img src="./images/pexels-pixabay-258804.jpg"  alt="">
-                    <p> Celebrity Night </p>
-                    <span>- Research Club -</span>
-                </div>
-                <div class="slide">
-                    <img src="./images/pexels-jonas-von-werne-2897462.jpg" alt="">
-                    <p> Research Night Celebrations </p>
-                    <span>- Research Club -</span>
-                </div>
-                <div class="slide">
-                    <img src="./images/pexels-min-an-1157557.jpg"  alt="">
-                    <p> Holy Celebration  </p>
-                    <span>- Research Club -</span>
-                </div>
-                <div class="slide">
-                    <img src="./images/pexels-olena-bohovyk-3646172.jpg"  alt="">
-                    <p> Library Hidden Book Game</p>
-                    <span>- Research Club -</span>
-                </div>
-                <div class="slide">
-                    <img src="./images/pexels-pixabay-159775.jpg" alt="">
-                    <p> System-Hackathon Challenge</p>
-                    <span>- Research Club  -</span>
-                </div>
+<script>
+    import evnt from '../../lib/Eventa.json'
+    
+</script>
+
+<div  class="place-self-center group-active: grid grid-cols-6 p-10 h-[42rem]  " data-aos="fade-up" data-aos-anchor-placement="center-bottom" style=" background-size: cover; background-position: top center;background-image: linear-gradient(to Right,rgba(0,0,0,1),rgba(0,0,0,0)), url(./images/Page-3-Image-5.jpg)" > 
+    <div class='col-end-2 col-span-2 w-[26rem] rounded-3xl p-4'>
+        <h1 class="md:text-5xl text-[4rem] text-slate-100 shadow-2">Gallary</h1>
+        <h3 class="text-2xl text-slate-100 shadow-2 mt-4">Here are all the events that we conduct </h3>
+        <div class="flex justify-center m-6">
             </div>
-            <div class="slider-dots"></div>
+    </div>
+</div>
+<section class="Event place-self-center w-full mt-14 max-w-[90rem] h-fit "data-aos="fade-up" data-aos-anchor-placement="center-bottom" style=" background-size: cover; background-position: top center;background-image: linear-gradient(to Right,rgba(0,0,0,1),rgba(0,0,0,0)), url(./images/Page-3-Image-5.jpg)">
+    <div class="container  bg-white shadow-2xl p-4">
+        <h1 class="text-5xl mt-[4.75rem] p-2 underline">
+            Our previous events</h1>
+        <!-- <p class="text-2xl ">We do various events in a year and several about them are very Entertaining</p> -->
+        <div class="slider flex overflow-scroll snap-x gap-9 snap-mandatory before:shrink-0 before:w-[30vw] after:shrink-0 after:w-[30vw]">
+            {#each evnt as _event}
+            <div class="slide p-4 bg-slate-50 m-2 shrink-0 snap-x snap-center grid-cols-1 grid">
+                <img src={_event.src}  class="h-[40em] w-auto bg-cover shadow-2xl" alt="">
+                <p class="text-2xl mt-[4.75rem] text-center underline"> {_event.title} </p>
+                <span class="text-3xl text-center">- Research Club -</span>
+            </div>{/each}
         </div>
-    </section>
-<style>
-
-:root{
-    --primary:#54BAB9;
-    --dark:#161616;
-    --pure:#FFFFFF;
-    --ternary:#898989;
-    --light:#F2F2F2;
-    --secondary:#070606;
-    --my:#D3CEDF;
-    --you:#0F3D3E;
-    --mee:#D9D7F1;
-    --dar2:#222831;
-}
-
-
-*{
-    padding: 0;
-    margin :0;
-    box-sizing: border-box;
-    -webkit-font-smotthing:antialiase;
-}
-
-.container{
-    max-width:100%;
-    padding:0 10px;
-    margin: 0 auto;
-}
-.section-heading{
-    font-size:1.7rem;
-    color:var(--ternary);
-    text-align: center;
-    margin-bottom: 1rem;
-    line-height: 1;
-    margin-top:0;
-}
-.section-heading span{
-    color: var(--primary);
-}
-
-.section-heading + p{
-    color:var(--ternary);
-    font-family:'Lato' , sans-serif;
-    margin-bottom :3.8rem;
-    text-align:center;
-}
-section{
-    padding: 3.1rem 0;
-}
-
-
-section.Event .slider .slide img{
-    width: 1100px;
-    height: 510px;
-    border-radius:0%;
-    object-fit: cover;
-    margin-bottom: 1.5rem;
-    margin-top: 0.5rem;
-
-}
-
-section.Event .slider .slide{
-    text-align:center;
-    display:flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 0 10rem;
-} 
-
-section.Event .slider .slide p{
-    font-family: 'Lato' , sans-serif;
-    color: var(--secondary);
-    margin-bottom: 0.5rem;
-}
-
-section.Event .slider .slide span{
-    font-size: 1.6rem;
-}
-
-
-</style>
+        <div class="slider-dots"></div>
+    </div>
+</section>

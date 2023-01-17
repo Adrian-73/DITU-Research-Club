@@ -28,6 +28,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"aos": "^2.3.4",
 		"better-sqlite3": "^8.0.1",
 		"googleapis": "^107.0.0",
 		"prisma": "^4.8.1"

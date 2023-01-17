@@ -1,9 +1,16 @@
 <script>
+    import { onMount } from 'svelte';
+    
+    onMount(()=>{
+        // @ts-ignore
+        AOS.init();
+    }
+    )
     import "../app.css" ;
     import logo from "$lib/LOGO.png" ;
     import {cubicOut} from 'svelte/easing' ;
     import {tweened} from 'svelte/motion' ;
-    
+    import dit from "$lib/SeekPng.com_cognizant-logo-png_3357203.png" ;
     let menu= false ;
     export const nav1 = tweened(0,{
         easing: cubicOut
@@ -23,20 +30,24 @@
 
 <div class='nav' style='--sm:{$nav1-110}px; --lg : { $nav3 - 100 }% '>
         <div class='max-w-full h-16 bg-stone-400 rounded-r-full left-0 ' style='width: {90 + $nav2}px'></div>
-        <div class =' py-6  h-full w-[180px] flex flex-col ' style = 'size :{$nav3}%'>
+        {#if ($nav3 > 40)}<div class =' py-6  h-full w-full flex flex-col ' style = 'size :{$nav3}%'>
             <a href="/" class='nav_item' on:click={nav}>Home </a>
+            <hr class="divide-solid mx-4 border-slate-500 ">
             <a href="/Abouts" class='nav_item'on:click={nav}>Abouts </a>
+            <hr class="divide-solid mx-4 border-slate-500 ">
             <a href="/Gallary" class='nav_item'on:click={nav}>Gallary</a>
+            <hr class="divide-solid mx-4 border-slate-500 ">
             <a href="/Research" class='nav_item'on:click={nav}>Research </a>
-            <a href="/Form" class='nav_item'on:click={nav}>Form </a>
-        </div>
+            <!-- <a href="/Form" class='nav_item'on:click={nav}>Form </a> -->
+        </div>{/if}
 </div>
 
-<header class='h-min w-full flex fixed top-0 left-0 place-self-center'>
+<header class='h-min w-full flex fixed top-0 left-0 place-self-center  z-50'>
 
     <button class=' menu_btn ' on:click={nav} > <p style='margin-left: {$nav2}px ;margin-right: {$nav2}px' > Menu</p>  </button>
-    <div class='bg-stone-900 flex p-3 justify-between items-center w-full rounded-l-full'>
-        <p class='sm:text-4xl text-5xl sm:my-0 my-2 text-white pl-4'>DIT Research</p>
+    <div class='bg-stone-900 flex p-3 justify-start items-center w-full rounded-l-full sm:my-0 pl-6' >
+        <img class='h-[3.25rem]' src={dit} alt="View All Dit Dehradun - Dit University Dehradun Logo@seekpng.com">
+        <p class='sm:text-4xl text-5xl  text-white pl-4'>Research</p>
         <!--div class="px-4 h-min bg-white rounded-full">
             <input class = 'p-1 max-w-[90px] lg:w-min' type="text" placeholder="Search..">
             <button class='bg-white p-1'>Search</button>
@@ -44,48 +55,48 @@
         
     </div>
 </header>
-<div class="w-full sm:pt-0 pt-10 grid grid-cols-1 main place-items-center" style="--size : {$nav1+70 }px">
+<div class="w-full sm:pt-0  grid grid-cols-1 main place-items-center" style="--size : {$nav1+70 }px">
     <slot>
     </slot>
 </div>
 
-<footer class=' bg-stone-900 pt-20 p-[50px] sm:pl-[100px] justify-center w-max sm:w-full'>
+<footer class=' bg-black pt-20 p-[50px] sm:pl-[100px] justify-center w-max sm:w-full'>
     <div class='px-4 justify-center w-full md:flex mr-10' >
         <nav class='min-h-[560px] w-[490px] grid grid-cols-2 gap-0'>
             <div class='block'>
-                <h3 class='text-white text-3xl '><a href="">Home</a></h3>
-                <p class='text-white text-xl '><a href="">Link1</a></p>
+                <h3 class='text-white text-3xl '><a href="/">Home</a></h3>
+                <p class='text-white text-xl '><a href="/">Link1</a></p>
                 <p class='text-white text-xl '>Link2</p>
                 <p class='text-white text-xl '>Link3</p>
             </div>
             <div class='block'>
-                <h3 class='text-white text-3xl '><a href="">About</a></h3>
+                <h3 class='text-white text-3xl '><a href="/About">About</a></h3>
                 <p class='text-white text-xl '>Link1</p>
                 <p class='text-white text-xl '>Link2</p>
                 <p class='text-white text-xl '>Link3</p>
             </div>
             <div class='block'>
-                <h3 class='text-white text-3xl '><a href="">Gallary</a></h3>
+                <h3 class='text-white text-3xl '><a href="/Gallary">Gallary</a></h3>
                 <p class='text-white text-xl '>Link1</p>
                 <p class='text-white text-xl '>Link2</p>
                 <p class='text-white text-xl '>Link3</p>
             </div>
             <div class='block'>
-                <h3 class='text-white text-3xl '><a href="">Research</a></h3>
+                <h3 class='text-white text-3xl '><a href="/Research">Research</a></h3>
                 <p class='text-white text-xl '>Link1</p>
                 <p class='text-white text-xl '>Link2</p>
                 <p class='text-white text-xl '>Link3</p>
             </div>
             <div class='block'>
-                <h3 class='text-white text-3xl '><a href="">Forms</a></h3>
-                <p class='text-white text-xl '>Link1</p>
-                <p class='text-white text-xl '>Link2</p>
-                <p class='text-white text-xl '>Link3</p>
+                <h3 class='text-white text-3xl '>Forms</h3>
+                <p class='text-white text-lg  '><a href="/Form/member">Join Club</a></p>
+                <p class='text-white text-lg '><a href="/Forms/research">Conduct Research</a></p>
+                
             </div>
         </nav>
         <div class=' max-w-[490px] place-items-center justify-center'>
             
-            <div class="lg:w-full w-max ml-2 place-items-center grid"><a href="/"><img src={logo} class="mb-8 h-[190px]"/></a></div>
+            <div class="lg:w-full w-max ml-2 place-items-center grid"><a href="/"><img src={logo} alt="Research club logo" class="mb-8 h-[190px]"/></a></div>
             <div class="flex min-w-[260px]  justify-between pb-4">
                 <a href="" target="_blank">
                     <svg width="48" height="48" viewBox="0 0 48 48" fill="none"  class="social">
@@ -141,11 +152,12 @@
     }
     @media only screen and (max-width: 640px) {
         .nav {
-            @apply w-full opacity-80;
+            @apply w-full opacity-80 shadow-black drop-shadow-2xl z-10;
             left: var(--lg) ;
+
         }
         .nav_item{
-            @apply text-4xl  px-10 pt-10;
+            @apply text-4xl  px-10 pt-10 grid-cols-1;
         }
         .menu_btn{
             @apply bg-stone-400;
