@@ -60,7 +60,7 @@
     </slot>
 </div>
 
-<footer class=' bg-black pt-20 p-[50px] sm:pl-[100px] justify-center w-max sm:w-full'>
+<footer class=' bg-black pt-20 p-[50px] sm:pl-[100px] justify-center w-full sm:w-full'>
     <div class='px-4 justify-center w-full md:flex mr-10' >
         <nav class='min-h-[560px] w-[490px] grid grid-cols-2 gap-0'>
             <div class='block'>
@@ -90,7 +90,7 @@
             <div class='block'>
                 <h3 class='text-white text-3xl '>Forms</h3>
                 <p class='text-white text-lg  '><a href="/Form/member">Join Club</a></p>
-                <p class='text-white text-lg '><a href="/Forms/research">Conduct Research</a></p>
+                <p class='text-white text-lg '><a href="/Form/research">Conduct Research</a></p>
                 
             </div>
         </nav>

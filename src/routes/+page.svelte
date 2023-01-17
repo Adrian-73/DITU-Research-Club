@@ -59,7 +59,7 @@
     
 </div>
 
-<div class="max-w-[90rem] h-[40rem] w-full p-10 bg-white shadow-xl  flex flex-col">
+<div class="max-w-[90rem] h-[40rem] w-full p-10 bg-white shadow-xl  flex flex-col" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
 	<p class=' text-4xl h-min bg-white'>Latest Research Articals</p>
     
 {#if viewportComponent == views[currentView]}

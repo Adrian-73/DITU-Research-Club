@@ -1,7 +1,7 @@
 <script>
 	import { fade } from 'svelte/transition'
 	import Paper from '../../lib/Papers.json';
-	import labs from '../../lib/Labs.json'
+	import labs from '../../lib/labs.json'
 	/**
 	 * @type {{ Page: any; }}
 	 */

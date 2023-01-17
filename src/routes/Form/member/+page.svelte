@@ -1,2 +1,2 @@
 <!-- svelte-ignore a11y-missing-attribute -->
-<div class="w-max shadow-2xl m-4 h-screen place-self-center grid place-items-center"><iframe width="740px" height="1000" src="https://forms.office.com/r/zQ7sn71KVN?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100%" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe></div>
+<iframe width="100%" height="2000" src="https://forms.office.com/r/zQ7sn71KVN?embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none;w-max shadow-2xl m-4 h-screen" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
