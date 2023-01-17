@@ -66,12 +66,12 @@
 	<div id="viewport" class="p-4 w-full max-w-[80rem] h-full place-self-center" on:outroend={updateViewportComponent} transition:fade>
             <div class="p-4 w-full bg-teal-50 my-6  grid grid-cols-1 min-h-[15rem] h-full border-[px] shadow-xl border-slate-900 " transition:fade>
                 <div>
-                    <p class= "md:text-3xl text-3xl md:w-2/3 w-5/6  md:my-0 my-5">{views[currentView]['Title of paper']}</p>
-                    <a target="_blank" href="{views[currentView]['Journal Link']}"class= "place-self-end mt-4 text-blue-800 hover:text-blue-600 py-1  w-max">{views[currentView]['Name of journal']}</a>
+                    <p class= "md:text-4xl text-3xl md:w-2/3 w-5/6  md:my-0 my-5">{views[currentView]['Title of paper']}</p>
+                    <a target="_blank" href="{views[currentView]['Journal Link']}"class= "text-xl mt-10 text-blue-800 hover:text-blue-600 py-1  w-max">{views[currentView]['Name of journal']}</a>
                 </div>
                 <div class="flex w-full justify-between">
-                    <p class= "text-xl w-max">Author's : {views[currentView]['Name of the author\/s']}</p>
-                    <div class="flex">
+                    <p class= "text-2xl w-max">Author's : {views[currentView]['Name of the author\/s']}</p>
+                    <div class="flex mt-4">
                         <a target="_blank" href="{views[currentView]['Publication Link']}"class= "place-self-end mt-4 px-2 pb-2 pt-1 text-white bg-teal-400 rounded-2xl w-max">Read more</a>
                     </div>
                 </div>

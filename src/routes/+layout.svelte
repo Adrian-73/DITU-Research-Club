@@ -70,7 +70,7 @@
                 <p class='text-white text-xl '>Link3</p>
             </div>
             <div class='block'>
-                <h3 class='text-white text-3xl '><a href="/About">About</a></h3>
+                <h3 class='text-white text-3xl '><a href="/Abouts">About</a></h3>
                 <p class='text-white text-xl '>Link1</p>
                 <p class='text-white text-xl '>Link2</p>
                 <p class='text-white text-xl '>Link3</p>
