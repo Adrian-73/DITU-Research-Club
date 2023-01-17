@@ -69,7 +69,7 @@
 			<div class="flex w-full justify-between">
 				<p class= "text-xl w-max">Author's : {page['Name of the author\/s']}</p>
 				<div class="flex">
-					<a target="_blank" href="{page['Publication Link']}"class= "place-self-end mt-4 px-2 pb-2 pt-1 bg-teal-400 rounded-2xl w-max">Read more</a>
+					<a target="_blank" href="{page['Publication Link']}"class= "place-self-end mt-4 px-2 text-white pb-2 pt-1 bg-teal-400 rounded-2xl w-max">Read more</a>
 				</div>
 			</div>
 		</div></div>	
