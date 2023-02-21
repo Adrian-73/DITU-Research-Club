@@ -1,22 +1,22 @@
 [
-    {
-        "name":"COE – INTERNET OF THINGS",
-        "image":".\/images\/lab1.jpg",
-        "description":"The Centre of Excellence in Internet of Things (IoT) is an ultramodern facility and equipped with latest computing machines, simulators, sensors, microcontrollers and edge nodes allow undergraduate and postgraduate students to address real world societal problems by developing practical IoT solutions using the Arduino and the Raspberry Pi platforms"
-    },
-    {
-        "name":"COE – AI AND ROBOTICS",
-        "image":".\/images\/ab2.jpg",
-        "description":"The Centre of Excellence in Artificial Intelligence and Robotics (CAIR) pursues novel research by developing AI based solutions using latest computing machines, sensors, and a variety of robotics platforms"
-    },
-    {
-        "name":"COE – INDUSTRIAL AUTOMATION AND ROBOTICS",
-        "image":".\/images\/lab3.jpg",
-        "description":"This Centre at DIT University prepares multidisciplinary engineering graduates to fulfil the IAR workforce requirements of the industry. The Centre has world class infrastructure supported by HYDAC Germany - equipment’s, training kits, hardware, software and teaching aids with trained faculty."
-    },
-    {
-        "name":"COE - ADVANCED FUNCTIONAL SMART MATERIALS LAB",
-        "image":".\/images\/lab-4.jpg",
-        "description":"Advanced Functional Smart Materials Laboratory has been established in the year 2019 and inaugurated by Honourable Chancellor and Vice-chancellor sir on 7th October 2019. The primary goal of this laboratory is to provide state-of-the-art facilities to in-campus and outside users from various universities, academia, industries and society"
-    }
+	{
+		"name": "COE – INTERNET OF THINGS",
+		"image": "./images/lab1.jpg",
+		"description": "The Centre of Excellence in Internet of Things (IoT) is an ultramodern facility and equipped with latest computing machines, simulators, sensors, microcontrollers and edge nodes allow undergraduate and postgraduate students to address real world societal problems by developing practical IoT solutions using the Arduino and the Raspberry Pi platforms"
+	},
+	{
+		"name": "COE – AI AND ROBOTICS",
+		"image": "./images/ab2.jpg",
+		"description": "The Centre of Excellence in Artificial Intelligence and Robotics (CAIR) pursues novel research by developing AI based solutions using latest computing machines, sensors, and a variety of robotics platforms"
+	},
+	{
+		"name": "COE – INDUSTRIAL AUTOMATION AND ROBOTICS",
+		"image": "./images/lab3.jpg",
+		"description": "This Centre at DIT University prepares multidisciplinary engineering graduates to fulfil the IAR workforce requirements of the industry. The Centre has world class infrastructure supported by HYDAC Germany - equipment’s, training kits, hardware, software and teaching aids with trained faculty."
+	},
+	{
+		"name": "COE - ADVANCED FUNCTIONAL SMART MATERIALS LAB",
+		"image": "./images/lab-4.jpg",
+		"description": "Advanced Functional Smart Materials Laboratory has been established in the year 2019 and inaugurated by Honourable Chancellor and Vice-chancellor sir on 7th October 2019. The primary goal of this laboratory is to provide state-of-the-art facilities to in-campus and outside users from various universities, academia, industries and society"
+	}
 ]

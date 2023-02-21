@@ -1,18 +1,18 @@
 [
-    {
-        "src":"./images/Anusandhan.jpg",
-        "title":"Anusandhan Diwas"
-    },
-    {
-        "src":"./images/Page-9-Image-17.jpg",
-        "title":"Research Funding Avenues "
-    },
-    {
-        "src":"./images/Page-4-Image-7.jpg",
-        "title":"Paper Presentation Competition "
-    },
-    {
-        "src":"./images/Page-3-Image-5.jpg",
-        "title":"Paper Presentation Competition "
-    }
+	{
+		"src": "./images/Anusandhan.jpg",
+		"title": "Anusandhan Diwas"
+	},
+	{
+		"src": "./images/Page-9-Image-17.jpg",
+		"title": "Research Funding Avenues "
+	},
+	{
+		"src": "./images/Page-4-Image-7.jpg",
+		"title": "Paper Presentation Competition "
+	},
+	{
+		"src": "./images/Page-3-Image-5.jpg",
+		"title": "Paper Presentation Competition "
+	}
 ]

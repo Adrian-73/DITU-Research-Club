@@ -2,13 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 @layer components {
-.block{
-    @apply h-min w-[220px] pb-10 pt-5 pl-5;
-
+	.block {
+		@apply h-min w-[220px] pb-10 pt-5 pl-5;
+	}
+	.social {
+		@apply fill-white transition duration-[400ms] hover:fill-teal-400;
+	}
 }
-.social{
-    @apply fill-white transition duration-[400ms] hover:fill-teal-400 ;
-}
-
-}
-

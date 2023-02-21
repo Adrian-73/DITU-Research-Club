@@ -1,44 +1,44 @@
 [
-    {
-        "id": 1,
-        "name": "Harshit ",
-        "designation": "Student Advisor",
-        "Photo": "https:\/\/www.w3schools.com\/w3images\/avatar2.png",
-        "description": "John is a UI\/UX designer living in New York."
-    },
-    {
-        "id": 2,
-        "name": "Tanul Khare",
-        "designation": "P.R.O",
-        "Photo": "https:\/\/www.w3schools.com\/w3images\/avatar2.png",
-        "description": "John is a UI\/UX designer living in New York."
-    },
-    {
-        "id": 3,
-        "name": "Yashika Tyagi",
-        "designation": "H.R Maneger",
-        "Photo": "https:\/\/www.w3schools.com\/w3images\/avatar2.png",
-        "description": "John is a UI\/UX designer living in New York."
-    },
-    {
-        "id": 4,
-        "name": "Abrav",
-        "designation": "Reporting head",
-        "Photo": "https:\/\/www.w3schools.com\/w3images\/avatar2.png",
-        "description": "John is a UI\/UX designer living in New York."
-    },
-    {
-        "id": 5,
-        "name": "Yeash Prakash",
-        "designation": "Publicity head",
-        "Photo": "https:\/\/www.w3schools.com\/w3images\/avatar2.png",
-        "description": "John is a UI\/UX designer living in New York."
-    },
-    {
-        "id": 6,
-        "name": "Akshat Bhat",
-        "designation": "Event Manager",
-        "Photo": "https:\/\/www.w3schools.com\/w3images\/avatar2.png",
-        "description": "John is a UI\/UX designer living in New York."
-    }
+	{
+		"id": 1,
+		"name": "Harshit ",
+		"designation": "Student Advisor",
+		"Photo": "https://www.w3schools.com/w3images/avatar2.png",
+		"description": "John is a UI/UX designer living in New York."
+	},
+	{
+		"id": 2,
+		"name": "Tanul Khare",
+		"designation": "P.R.O",
+		"Photo": "https://www.w3schools.com/w3images/avatar2.png",
+		"description": "John is a UI/UX designer living in New York."
+	},
+	{
+		"id": 3,
+		"name": "Yashika Tyagi",
+		"designation": "H.R Maneger",
+		"Photo": "https://www.w3schools.com/w3images/avatar2.png",
+		"description": "John is a UI/UX designer living in New York."
+	},
+	{
+		"id": 4,
+		"name": "Abrav",
+		"designation": "Reporting head",
+		"Photo": "https://www.w3schools.com/w3images/avatar2.png",
+		"description": "John is a UI/UX designer living in New York."
+	},
+	{
+		"id": 5,
+		"name": "Yeash Prakash",
+		"designation": "Publicity head",
+		"Photo": "https://www.w3schools.com/w3images/avatar2.png",
+		"description": "John is a UI/UX designer living in New York."
+	},
+	{
+		"id": 6,
+		"name": "Akshat Bhat",
+		"designation": "Event Manager",
+		"Photo": "https://www.w3schools.com/w3images/avatar2.png",
+		"description": "John is a UI/UX designer living in New York."
+	}
 ]
