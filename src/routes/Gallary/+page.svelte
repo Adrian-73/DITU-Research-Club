@@ -1,5 +1,7 @@
 <script>
     import evnt from '../../lib/Eventa.json'
+    import { Splide, SplideSlide } from '@splidejs/svelte-splide';
+    import '@splidejs/svelte-splide/css/sea-green';
     
 </script>
 
@@ -27,3 +29,15 @@
         <div class="slider-dots"></div>
     </div>
 </section>
+<div class="bg-white shadow-xl ">
+    <Splide options={ { rewind: true,speed:1000,type:"loop",autoplay:true,} }  class="Event place-self-center w-full mt-14 max-w-[90rem] h-fit p-2">
+        {#each evnt as _event}
+                <SplideSlide>
+                    <div class="slide p-4 bg-slate-50 m-2 shrink-0 snap-x snap-center grid-cols-1 grid">
+                        <img src={_event.src}  class="h-[40em] w-auto bg-cover shadow-2xl place-self-center" alt="">
+                        <p class="text-2xl mt-[4.75rem] text-center underline"> {_event.title} </p>
+                        <span class="text-3xl text-center">- Research Club -</span>
+                    </div>
+                </SplideSlide>{/each}
+    </Splide>
+</div>

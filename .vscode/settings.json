@@ -1,4 +1,6 @@
 {
     "sqltools.useNodeRuntime": true,
-    "sqltools.connections": []
+    "sqltools.connections": [],
+    "css.lint.unknownAtRules": "ignore",
+    "css.customData": ["./css-data.json"]
 }

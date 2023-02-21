@@ -1,36 +1,18 @@
 <script>
     import { onMount } from 'svelte';
-    
     onMount(()=>{
         // @ts-ignore
-        AOS.init();
-    }
-    )
+        AOS.init();})
     import "../app.css" ;
     import logo from "$lib/LOGO.png" ;
-    import {cubicOut} from 'svelte/easing' ;
-    import {tweened} from 'svelte/motion' ;
     import dit from "$lib/SeekPng.com_cognizant-logo-png_3357203.png" ;
-    let menu= false ;
-    export const nav1 = tweened(0,{
-        easing: cubicOut
-    })
-    export const nav2 = tweened(0,{
-        easing: cubicOut
-    })
-    export const nav3 = tweened(0,{
-        easing: cubicOut
-    });
-    function nav(){menu = !menu;
-        nav1.set(menu?110:0);
-        nav2.set(menu?30:0);
-        nav3.set(menu?100:0);}
-
+    let menu= false ; let nav_1 = false ; let nav_2 = false ; let nav_3 = false ; let nav_4 = false ;
+    function nav(){menu = !menu; nav_1 = !nav_1; nav_2 = !nav_2; nav_3 = !nav_3; nav_4 = !nav_4;}
   </script>
 
-<div class='nav' style='--sm:{$nav1-110}px; --lg : { $nav3 - 100 }% '>
-        <div class='max-w-full h-16 bg-stone-400 rounded-r-full left-0 ' style='width: {90 + $nav2}px'></div>
-        {#if ($nav3 > 40)}<div class =' py-6  h-full w-full flex flex-col ' style = 'size :{$nav3}%'>
+<nav class='nav' class:nav_2 >
+        <div class='max-w-full py-6 sm:bg-stone-400 rounded-r-full mr-10 sm:text-stone-400 text-lg origin-left scale-x-0 ease-in-out transition-all' class:nav_3> Menu</div>
+        <ul class =' py-6 origin-left h-full w-full flex flex-col sm:opacity-0 sm:transition-all duration-500 ease-in-out' class:menu >
             <a href="/" class='nav_item' on:click={nav}>Home </a>
             <hr class="divide-solid mx-4 border-slate-500 ">
             <a href="/Abouts" class='nav_item'on:click={nav}>Abouts </a>
@@ -39,26 +21,21 @@
             <hr class="divide-solid mx-4 border-slate-500 ">
             <a href="/Research" class='nav_item'on:click={nav}>Research </a>
             <!-- <a href="/Form" class='nav_item'on:click={nav}>Form </a> -->
-        </div>{/if}
-</div>
+        </ul>
+</nav>
 
-<header class='h-min w-full flex fixed top-0 left-0 place-self-center  z-50'>
+<header class='h-min w-full flex fixed top-0 left-0 place-self-center z-50' >
 
-    <button class=' menu_btn ' on:click={nav} > <p style='margin-left: {$nav2}px ;margin-right: {$nav2}px' > Menu</p>  </button>
+    <button class=' menu_btn ' on:click={nav} > <p class="transition-all ease-in-out duration-500" class:nav_4> Menu</p>  </button>
     <div class='bg-stone-900 flex p-3 justify-start items-center w-full rounded-l-full sm:my-0 pl-6' >
         <img class='h-[3.25rem]' src={dit} alt="View All Dit Dehradun - Dit University Dehradun Logo@seekpng.com">
         <p class='sm:text-4xl text-5xl  text-white pl-4'>Research</p>
-        <!--div class="px-4 h-min bg-white rounded-full">
-            <input class = 'p-1 max-w-[90px] lg:w-min' type="text" placeholder="Search..">
-            <button class='bg-white p-1'>Search</button>
-        </div-->
-        
     </div>
 </header>
-<div class="w-full sm:pt-0  grid grid-cols-1 main place-items-center" style="--size : {$nav1+70 }px">
+<main class="w-full sm:pt-0 grid grid-cols-1 sm:pl-[70px] place-items-center ease-in-out duration-500" class:nav_1>
     <slot>
     </slot>
-</div>
+</main>
 
 <footer class=' bg-black pt-20 p-[50px] sm:pl-[100px] justify-center w-full sm:w-full'>
     <div class='px-4 justify-center w-full md:flex mr-10' >
@@ -125,10 +102,12 @@
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24ZM23.2812 19.5075L23.3316 20.338L22.4922 20.2363C19.4369 19.8465 16.7677 18.5245 14.5013 16.3043L13.3934 15.2027L13.108 16.0162C12.5036 17.8296 12.8897 19.7448 14.1488 21.0328C14.8203 21.7446 14.6692 21.8463 13.5109 21.4226C13.108 21.287 12.7554 21.1854 12.7219 21.2362C12.6044 21.3548 13.0073 22.8971 13.3262 23.5072C13.7627 24.3546 14.6524 25.1851 15.6261 25.6766L16.4487 26.0664L15.475 26.0833C14.5349 26.0833 14.5013 26.1003 14.6021 26.4562C14.9378 27.5578 16.264 28.7272 17.7413 29.2357L18.7822 29.5916L17.8756 30.1339C16.5326 30.9135 14.9546 31.3542 13.3766 31.3881C12.6211 31.405 12 31.4728 12 31.5237C12 31.6931 14.0481 32.6422 15.24 33.0151C18.8157 34.1167 23.063 33.6422 26.2526 31.7609C28.5189 30.422 30.7852 27.7612 31.8428 25.1851C32.4136 23.8123 32.9844 21.304 32.9844 20.1007C32.9844 19.3211 33.0347 19.2194 33.9748 18.2872C34.5288 17.7449 35.0492 17.1517 35.15 16.9822C35.3178 16.6602 35.3011 16.6602 34.4449 16.9483C33.018 17.4568 32.8165 17.389 33.5216 16.6263C34.042 16.084 34.6631 15.101 34.6631 14.8129C34.6631 14.762 34.4113 14.8468 34.1259 14.9993C33.8238 15.1688 33.1523 15.423 32.6486 15.5756L31.7421 15.8637L30.9195 15.3044C30.4663 14.9993 29.8283 14.6604 29.4926 14.5587C28.6364 14.3214 27.327 14.3553 26.5548 14.6265C24.4563 15.3891 23.1301 17.3551 23.2812 19.5075Z" />
                     </svg>
                 </a>
-               
             </div>
             <hr/>
-            <p class="text-white text-justify">Our goal for research at DIT University is to establish a reputation for highly relevant, innovative, and societally relevant research that will not only advance our field of study but also have a substantial impact on the health and welfare of people living in our city, state, and region</p>
+            <p class="text-white text-justify">Our goal for research at DIT University is to establish a reputation for highly relevant,
+                innovative, and societally relevant research that will not only advance our field of study
+                but also have a substantial impact on the health and welfare of people living in our city,
+                state, and region</p>
             <hr/>
             <hr/>
             <hr/>
@@ -136,41 +115,18 @@
 </footer>
 
 <style>
-    @media only screen and (
-        min-width: 640px
-    ) {
-        .main {
-            padding-left: var(--size);
-        }
-        .nav{
-            @apply w-[180px];
-            left: var(--sm);
-        }
-        .nav_item{
-            @apply text-xl  px-6 py-1;
-        }
-    }
-    @media only screen and (max-width: 640px) {
-        .nav {
-            @apply w-full opacity-80 shadow-black drop-shadow-2xl z-10;
-            left: var(--lg) ;
-
-        }
-        .nav_item{
-            @apply text-4xl  px-10 pt-10 grid-cols-1;
-        }
-        .menu_btn{
-            @apply bg-stone-400;
-        }
-    }
-    .nav{
-        @apply bg-white  shadow-xl fixed h-full  top-0;
-    }
-    .nav_item{
-        @apply bg-white hover:bg-stone-200 w-full h-max;
-
-    }
-    .menu_btn{
-        @apply px-3 md:text-lg text-2xl font-bold mr-3 rounded-r-full;
-    }
+    .nav_1{@apply sm:pl-[180px]}
+    .nav_2{ @apply ml-[100%] sm:ml-[110px];}
+    .nav_3{@apply scale-x-100;}
+    .nav_4{@apply px-8}
+    .menu {@apply opacity-100;}
+    .nav  {@apply bg-white w-full opacity-80 shadow-black sm:shadow-slate-500
+          drop-shadow-2xl z-10 sm:opacity-100 sm:drop-shadow-none shadow-xl fixed 
+          h-full ease-in-out duration-500 top-0 sm:w-[180px] left-[-100%] sm:left-[-110px];}
+    .nav_item{@apply bg-white hover:bg-stone-200 
+              w-full h-max sm:text-xl sm:px-6 sm:py-1
+              text-4xl  px-10 pt-10 grid-cols-1 ;}
+    .menu_btn{@apply px-3 md:text-lg text-2xl h-max 
+              py-6 font-bold mr-3 rounded-r-full 
+              bg-stone-400 sm:bg-transparent;}
 </style>

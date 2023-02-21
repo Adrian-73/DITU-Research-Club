@@ -38,7 +38,7 @@
 		
 </div>
 <nav class="place-self-center flex gap-5 p-4" >
-		{#each labs as lab,index}
+		{#each labs as _,index}
 			<div class=" flex gap-5 ">
 				<a href="#car-item-{index}"  class="text-lg ">{index+1}</a>
 			</div>
